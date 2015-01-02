@@ -1,0 +1,43 @@
+<UserControl
+    x:Class="FourRivers.HelpFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FourRivers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="700"
+    d:DesignWidth="400">
+    
+    <Grid Background="#FF663300">
+        <StackPanel Height="800"> 
+            <TextBlock Margin="20, 20" Text="The Game" Style="{StaticResource GroupHeaderTextStyle}">
+                
+            </TextBlock>
+            <TextBlock  Margin="50, 50" TextWrapping="Wrap" Text="Remove all the tiles by removing matching pairs of tiles. A pair can be removed from the game board if there is a clear path with two or fewer turns. The tiles can travel outside the edge of the gameboard." Height="128" Style="{StaticResource BodyTextStyle}"/>
+            <Canvas Height="220" Width="220" Name="canHelp">
+                <local:Tile Height="50" Width="50"/>
+                <Image x:Name="tileMountain00" Height="50" Width="50" Source="Assets/SedateTheme/tile10.png"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile29.png" Canvas.Top="110"/>
+                <Image x:Name="tileApple055" Height="50" Width="50" Source="Assets/SedateTheme/tile9.png" Canvas.Top="55"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile3.png" Canvas.Top="165"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile8.png" Canvas.Left="55" Visibility="Collapsed" Name="tileAnimation"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile8.png" Canvas.Left="55" Canvas.Top="55" Visibility="Collapsed"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile8.png" Canvas.Left="55" Canvas.Top="110" Visibility="Collapsed"/>
+                <Image x:Name="tileApple55165" Height="50" Width="50" Source="Assets/SedateTheme/tile9.png" Canvas.Left="55" Canvas.Top="165"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile23.png" Canvas.Left="110"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile5.png" Canvas.Left="165"/>
+                <Image x:Name="tilePaw11055" Height="50" Width="50" Source="Assets/SedateTheme/tile11.png" RenderTransformOrigin="2.827,1.562" Canvas.Left="110" Canvas.Top="55"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile26.png" Canvas.Left="165" Canvas.Top="55"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile8.png" Canvas.Left="110" Canvas.Top="110" Visibility="Collapsed"/>
+                <Image x:Name="tileMountain165110" Height="50" Width="50" Source="Assets/SedateTheme/tile10.png" Canvas.Left="165" Canvas.Top="110"/>
+                <Image x:Name="tilePaw110165" Height="50" Width="50" Source="Assets/SedateTheme/tile11.png" Canvas.Left="110" Canvas.Top="165"/>
+                <Image Height="50" Width="50" Source="Assets/SedateTheme/tile21.png" Canvas.Left="165" Canvas.Top="165"/>
+            </Canvas>
+            <Button x:Name="btnNoTurns" Content="No turns" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Click="btnNoTurns_Click"/>
+            <Button x:Name="btnOneTurn" Content="One turn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Click="btnOneTurn_Click"/>
+            <Button x:Name="btnTwoTurns" Content="Two turns" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Click="btnTwoTurns_Click"/>
+            <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Click="btnReset_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
